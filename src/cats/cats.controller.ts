@@ -6,11 +6,11 @@ import { CreateCatDto } from './create-cat.dto'
 
 @Controller('cats')
 export class CatsController {
-    // @Get()
-    // findAll(@Req() req: Request): string {
-    //     console.log(req,"reqiest")
-    //     return "this action from cats controller";
-    // }
+    @Get()
+    findAll(@Req() req: Request): string {
+        console.log(req,"reqiest")
+        return "this action from cats controller";
+    }
 
     @Post()
     // @Header('Content-Type', 'application/json')
