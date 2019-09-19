@@ -1,9 +1,10 @@
 import { Controller, Get, Req, Post, Body, Header } from '@nestjs/common';
 import { Request } from 'express';
 import { CreateCatDto } from './create-cat.dto'
+import { ApiUseTags } from '@nestjs/swagger';
 
 
-
+@ApiUseTags('cats')
 @Controller('cats')
 export class CatsController {
     @Get()
